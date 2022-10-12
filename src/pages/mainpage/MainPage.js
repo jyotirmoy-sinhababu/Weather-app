@@ -15,7 +15,6 @@ const MainPage = () => {
   const handleChange = (e) => {
     setOnChange({ ...onChange, [e.target.name]: e.target.value });
   };
-
   const callApi = async () => {
     try {
       const data = await axios

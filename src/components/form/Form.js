@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Form = () => {
+const Form = ({ lat, lon, handleChange }) => {
   return (
     <>
       <div>
@@ -9,9 +9,14 @@ const Form = () => {
             type='text'
             placeholder='country'
             name='country'
-            onChange={{}}
+            onChange={handleChange}
           />
-          <input type='text' placeholder='city' name='city' onChange={{}} />
+          <input
+            type='text'
+            placeholder='city'
+            name='city'
+            onChange={handleChange}
+          />
         </form>
       </div>
     </>
