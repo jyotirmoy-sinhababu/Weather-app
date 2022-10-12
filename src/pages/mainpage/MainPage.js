@@ -15,11 +15,12 @@ const MainPage = () => {
   const handleChange = (e) => {
     setOnChange({ ...onChange, [e.target.name]: e.target.value });
   };
+  console.log(onChange.city);
   const callApi = async () => {
     try {
       const data = await axios
         .get(
-          `http://api.openweathermap.org/geo/1.0/direct?q={london},{england}&appid=${apiKey}`
+          `http://api.openweathermap.org/geo/1.0/direct?q= ${onChange.city},${onChange.country}&appid=${apiKey}`
         )
         .then((res) => {
           setLocationLat(res.data.lat);
@@ -33,11 +34,16 @@ const MainPage = () => {
 
   useEffect(() => {
     callApi();
-  }, []);
+  }, [onChange]);
 
   return (
     <div>
-      <Form lat={locationLat} lon={locationLon} handleChange={handleChange} />
+      <Form
+        lat={locationLat}
+        lon={locationLon}
+        handleChange={handleChange}
+        apiKey={apiKey}
+      />
     </div>
   );
 };
