@@ -1,19 +1,26 @@
 import './mainpage.css';
+import axios from 'axios';
 import { useState, useEffect } from 'react';
 
 const MainPage = () => {
-  const api = {
-    key: process.env.REACT_WEATHER_API_KEY,
-    url: 'https://api.openweathermap.org/data/2.5/',
+  const apiKey = process.env.REACT_APP_API_KEY;
+
+  const callApi = async () => {
+    try {
+      const data = await axios
+        .get(
+          `http://api.openweathermap.org/geo/1.0/direct?q={city name},{country code}&appid=${apiKey}`
+        )
+        .then((res) => {
+          console.log(res.data);
+        });
+    } catch (err) {
+      console.log('err');
+    }
   };
+  callApi();
 
-  const [apiData, setApiData] = useState('');
-
-  useEffect(() => {
-    Axios.get(api.url);
-  });
-
-  return <div></div>;
+  return <div>main</div>;
 };
 
 export default MainPage;
