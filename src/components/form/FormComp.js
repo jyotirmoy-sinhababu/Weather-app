@@ -5,6 +5,7 @@ import './form.css';
 
 const FormComp = () => {
   const [place, setPlace] = useState('');
+  const [weatherReport, setWeatherReport] = useState('');
 
   const apiKey = 'f717ff242248a3b5708565b749b90eed';
 
@@ -19,6 +20,7 @@ const FormComp = () => {
           `http://api.openweathermap.org/geo/1.0/direct?q= ${place.city},${place.country}&appid=${apiKey}`
         )
         .then((res) => {
+          debugger;
           handleSubmit(res.data[0].lat, res.data[0].lon);
           console.log(res.data[0].lat);
         });
@@ -28,16 +30,19 @@ const FormComp = () => {
   };
 
   const handleSubmit = (lat, lon) => {
-    try {
-      axios
-        .get(
-          `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`
-        )
-        .then((res) => {
-          console.log(res.data);
-        });
-    } catch (err) {
-      console.log(err);
+    if (lat && lon) {
+      try {
+        axios
+          .get(
+            `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`
+          )
+          .then((res) => {
+            console.log(res.data);
+            setWeatherReport(res.data);
+          });
+      } catch (err) {
+        console.log(err);
+      }
     }
   };
 
@@ -47,7 +52,9 @@ const FormComp = () => {
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            callApi();
+            if (place) {
+              callApi();
+            }
           }}
         >
           <input
@@ -65,8 +72,13 @@ const FormComp = () => {
           <button type='submit'>search</button>
         </form>
       </div>
+
       <div>
-        <WeatherData />
+        {weatherReport ? (
+          <WeatherData weatherReport={weatherReport} />
+        ) : (
+          <h1>NO DATA FOUND</h1>
+        )}
       </div>
     </>
   );
