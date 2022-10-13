@@ -7,8 +7,10 @@ const WeatherData = ({ weatherReport }) => {
         <p> Longitude: {weatherReport.coord.lon}</p>
       </div>
       <div>
-        <h3>Weather Report</h3>
         <p>Temp: {weatherReport.main.temp}K</p>
+        <p>Humidity: {weatherReport.main.humidity} hPa</p>
+        <p>Visibility: {weatherReport.visibility} meter</p>
+        <p>Wind Speed: {weatherReport.wind.speed} m/sec</p>
       </div>
     </>
   );
