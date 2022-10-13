@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
+import WeatherData from '../weatherData/WeatherData';
 import './form.css';
 
 const FormComp = () => {
@@ -63,6 +64,9 @@ const FormComp = () => {
           />
           <button type='submit'>search</button>
         </form>
+      </div>
+      <div>
+        <WeatherData />
       </div>
     </>
   );
