@@ -1,0 +1,38 @@
+.form-cnt {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 1500px;
+}
+
+.form {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-inp {
+  height: 30px;
+  padding: 5px;
+  border-radius: 7px;
+  font-size: 15px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.btn {
+  width: 47px;
+  border-radius: 50%;
+  border: none;
+}
+
+.alt-heading-cnt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alt-heading {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

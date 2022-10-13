@@ -1,3 +1,4 @@
+import './weatherData.css';
 const WeatherData = ({ weatherReport }) => {
   return (
     <>
