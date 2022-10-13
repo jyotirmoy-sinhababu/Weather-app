@@ -48,8 +48,9 @@ const FormComp = () => {
 
   return (
     <>
-      <div>
+      <div className='form-cnt'>
         <form
+          className='form'
           onSubmit={(e) => {
             e.preventDefault();
             if (place) {
@@ -58,12 +59,14 @@ const FormComp = () => {
           }}
         >
           <input
+            className='form-inp'
             type='text'
             placeholder='country'
             name='country'
             onChange={handleChange}
           />
           <input
+            className='form-inp'
             type='text'
             placeholder='city'
             name='city'
@@ -73,7 +76,7 @@ const FormComp = () => {
         </form>
       </div>
 
-      <div>
+      <div className='weather-data-cnt'>
         {weatherReport ? (
           <WeatherData weatherReport={weatherReport} />
         ) : (
