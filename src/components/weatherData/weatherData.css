@@ -1,0 +1,9 @@
+.first-parameters {
+  display: flex;
+  flex-direction: column;
+}
+
+.second-parameters {
+  display: flex;
+  flex-direction: column;
+}

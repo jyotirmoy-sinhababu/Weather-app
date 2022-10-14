@@ -36,3 +36,10 @@
 .alt-heading {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+.weather-data-cnt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
