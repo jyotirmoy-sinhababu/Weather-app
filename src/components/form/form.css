@@ -1,10 +1,16 @@
+.containers {
+  display: flex;
+  gap: 2rem;
+}
+
 .form-cnt {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 20px;
+  padding-right: 20px;
   width: 100%;
   max-width: 1500px;
+  gap: 2rem;
 }
 
 .form {
@@ -14,9 +20,11 @@
 
 .form-inp {
   height: 30px;
+  width: 120px;
   padding: 5px;
   border-radius: 7px;
   font-size: 15px;
+
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -42,4 +50,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 25px;
+  gap: 1.2rem;
 }

@@ -3,7 +3,10 @@ const WeatherData = ({ weatherReport }) => {
   return (
     <>
       <div className='first-parameters'>
-        <h2 className='city-name'>{weatherReport.name}</h2>
+        <div className='city-name-cnt'>
+          <h2 className='city-name'>{weatherReport.name}</h2>
+        </div>
+
         <p className='city-para'> Latitude: {weatherReport.coord.lat}</p>
         <p className='city-para'> Longitude: {weatherReport.coord.lon}</p>
       </div>

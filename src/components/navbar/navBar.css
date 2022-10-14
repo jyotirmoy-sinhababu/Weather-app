@@ -2,10 +2,11 @@
 
 .nav-cnt {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   max-width: 1500px;
+  padding-left: 45px;
 }
 
 .nav-heading {

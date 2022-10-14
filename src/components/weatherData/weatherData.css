@@ -1,9 +1,38 @@
 .first-parameters {
   display: flex;
   flex-direction: column;
+  background-color: rgb(153, 153, 246);
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 180px;
+  border-radius: 5px;
+  z-index: 10;
+  box-shadow: 5px 10px 18px #888888;
 }
 
 .second-parameters {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(153, 153, 246);
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  z-index: 10;
+  box-shadow: 5px 10px 18px #888888;
+}
+
+.city-name-cnt {
+  display: flex;
+  justify-content: center;
+}
+
+.city-name {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.city-para {
+  font-weight: 500;
 }
