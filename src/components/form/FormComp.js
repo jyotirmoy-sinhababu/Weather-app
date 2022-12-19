@@ -48,7 +48,7 @@ const FormComp = () => {
 
   return (
     <>
-      <div>
+      <div className='containers'>
         {' '}
         <div className='form-cnt'>
           <form
